@@ -1,0 +1,12 @@
+{
+	// añade la opción "parser" con "babel-eslint"
+	"parser": "babel-eslint",
+
+	// añade "prettier" (y si quieres "prettier/react") a las opciones de "extends"
+	"extends": ["prettier"],
+
+	// y por ultimo, en la llave de "plugins" añade el plugin de eslint para prettier
+	"plugins": ["prettier"]
+
+	// ...
+}

@@ -5,11 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "serve ./public"
+    "start": "serve ./public",
+    "lint": "eslint ./public/js/",
+    "lint:fix": "eslint ./ --fix"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "serve": "^11.3.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "*",
+    "eslint": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "*"
   }
 }
