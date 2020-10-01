@@ -1,8 +1,8 @@
 export default class SpriteSheet {
-  constructor(image, w, h) {
+  constructor(image, width, height) {
     this.image = image;
-    this.width = w;
-    this.height = h;
+    this.width = width;
+    this.height = height;
     this.tiles = new Map();
     this.animations = new Map();
   }
@@ -14,8 +14,8 @@ export default class SpriteSheet {
   define(name, x, y, width, height) {
     const buffers = [false, true].map((flip) => {
       const buffer = document.createElement("canvas");
-      buffer.height = height;
       buffer.width = width;
+      buffer.height = height;
 
       const context = buffer.getContext("2d");
 
@@ -25,8 +25,10 @@ export default class SpriteSheet {
       }
 
       context.drawImage(this.image, x, y, width, height, 0, 0, width, height);
+
       return buffer;
     });
+
     this.tiles.set(name, buffers);
   }
 
